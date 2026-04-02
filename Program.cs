@@ -1,6 +1,9 @@
+using Microsoft.Extensions.DependencyInjection.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+Infrastructure.InfrastructureExtensions.AddInfrastructureServices(builder.Services, builder.Configuration);
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
