@@ -8,10 +8,10 @@ namespace LBProject.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class BreachController : ControllerBase
+    public class BreachesController : ControllerBase
     {
         private IBreachRepository _breachRepository;
-        public BreachController(IBreachRepository breachRepository)
+        public BreachesController(IBreachRepository breachRepository)
         {
             _breachRepository = breachRepository;
         }
