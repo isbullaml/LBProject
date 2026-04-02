@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Infrastructure.Repository
 {
-    public class BreachRepository :IBreachRepository
+    public class BreachRepository : IBreachRepository
     {
         private readonly SqlService _sqlService;
         public BreachRepository(SqlService sqlService)
