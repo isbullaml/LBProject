@@ -26,14 +26,7 @@ namespace Infrastructure.Services
 
         public async Task<PwnBreach?> GetBreachByNameAsync(string name)
         {
-            try
-            {
-                return await _httpClient.GetFromJsonAsync<PwnBreach>($"breach/{name}");
-            }
-            catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                return null;
-            }
+            return await _httpClient.GetFromJsonAsync<PwnBreach>($"breach/{name}");
         }
     }
 }
